@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: yax46k2qi-go-gitops
+  description: This is GitOps manifest for yax46k2qi-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=yax46k2qi-go
+    backstage.io/kubernetes-id: yax46k2qi-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: yax46k2qi-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:yax46k2qi-go
